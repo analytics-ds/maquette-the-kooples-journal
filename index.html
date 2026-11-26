@@ -1,17 +1,12 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow, noarchive"><meta name="viewport" content="width=1440"><title>Maquette : le journal The Kooples</title>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Le journal The Kooples : idées look et guide d'entretien (maquette)</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{font-family:Arial,Helvetica,sans-serif;color:#111;background:#fff;width:1440px}
-header{display:flex;align-items:center;justify-content:space-between;padding:18px 56px;border-bottom:1px solid #e6e6e6}
-header .l{display:flex;align-items:center;gap:40px}
-header img{height:38px}
-nav{display:flex;gap:28px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-nav a{color:#111;text-decoration:none;padding-bottom:4px}
-nav a.on{border-bottom:2px solid #111;font-weight:bold}
-.ic{display:flex;gap:22px}
-.ic span{width:18px;height:18px;border:1.6px solid #111;border-radius:50%;display:block}
-.ic span:last-child{border-radius:3px}
+a{color:inherit;text-decoration:none}
 .wrap{padding:0 20px 0 20px}
 .bc{font-size:15px;color:#999;padding:10px 0 0;word-spacing:2px}
 h1{font-size:46px;line-height:1.12;font-weight:bold;letter-spacing:-.01em;max-width:900px;margin:26px 0 16px}
@@ -19,8 +14,8 @@ h1{font-size:46px;line-height:1.12;font-weight:bold;letter-spacing:-.01em;max-wi
 .search{margin:30px 0 26px;width:560px;height:50px;border:1.5px solid #111;border-radius:30px;display:flex;align-items:center;justify-content:space-between;padding:0 6px 0 22px;font-size:14px;color:#888}
 .search b{width:38px;height:38px;border-radius:50%;background:#111;display:block}
 .chips{display:flex;gap:10px;padding-bottom:30px;border-bottom:1px solid #e6e6e6}
-.chips span{font-size:13px;padding:9px 16px;border-radius:20px;background:#f2f2f2}
-.chips span.on{background:#111;color:#fff}
+.chips a,.chips span{font-size:13px;padding:9px 16px;border-radius:20px;background:#f2f2f2}
+.chips .on{background:#111;color:#fff}
 .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;padding:36px 0 50px}
 .k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#888;font-weight:bold}
 h2{font-size:26px;margin:6px 0 14px}
@@ -29,28 +24,85 @@ h2{font-size:26px;margin:6px 0 14px}
 .it img{width:62px;height:62px;object-fit:cover;object-position:top}
 .it h3{font-size:16px;line-height:1.3}
 .it p{font-size:12px;color:#888;margin-top:4px}
+a.it:hover h3{text-decoration:underline}
 .feat{background:#f3f0eb;padding:28px}
 .feat img{width:100%;height:330px;object-fit:cover;object-position:top}
 .feat .k{margin-top:20px}
 .feat h3{font-size:24px;margin:8px 0 10px}
 .feat p{font-size:14px;color:#555;line-height:1.5}
 .btn{display:inline-block;margin-top:18px;background:#111;color:#fff;font-size:13px;padding:12px 22px;letter-spacing:.06em;text-transform:uppercase}
+.sec{padding:48px 0 52px;border-top:1px solid #e6e6e6;scroll-margin-top:10px}
+.sec .top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px}
+.sec .top p{font-size:15px;color:#555;max-width:620px;line-height:1.5;margin-top:4px}
+.sec .top .all{font-size:13px;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid #111;padding-bottom:3px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 8px}
+.cd .im{aspect-ratio:4/5;background:#f2f2f2;overflow:hidden}
+.cd img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.cd .k{margin-top:14px;padding:0 9px}
+.cd h3{font-size:18px;line-height:1.3;margin-top:6px;padding:0 9px}
+.cd p{font-size:12px;color:#888;margin-top:6px;padding:0 9px}
+a.cd:hover h3{text-decoration:underline}
+.shop{background:#f3f0eb;padding:48px 20px 56px;margin:0 -20px}
+.shop h2{margin-bottom:6px}
+.shop .sub{font-size:15px;color:#555;margin-bottom:24px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tile{position:relative;height:420px;overflow:hidden;display:block}
+.tile img{width:100%;height:100%;object-fit:cover;object-position:top}
+.tile span{position:absolute;left:24px;bottom:24px;background:#fff;color:#000;font-size:13px;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;padding:12px 18px}
+.ft{border-top:1px solid #e6e6e6;margin-top:0}.ft img{display:block;width:1434px}
 .hdr{position:relative;height:91px}.hdr img{display:block;width:1440px;height:91px}.jr{position:absolute;left:767px;top:53.5px;font:bold 15px/17px Arial,sans-serif;color:#000}.fix{position:absolute;right:0;top:34px;width:10px;height:56px;background:#fff}
 </style></head><body>
-<div class="hdr"><img src="img/header-site.png" alt=""><span class="jr">JOURNAL</span><i class="fix"></i></div>
+<div class="hdr"><img src="img/header-site.png" alt=""><a class="jr" href="index.html">JOURNAL</a><i class="fix"></i></div>
 <div class="wrap">
-<div class="bc">Accueil / Journal</div>
-<h1>Le journal The Kooples : idées look, entretien et tendances</h1>
-<p class="intro">Une tenue pour chaque occasion, des conseils pour faire durer vos pièces en cuir, en laine ou en soie, et les tendances de la saison : tout pour choisir et porter vos pièces.</p>
+<div class="bc"><a href="https://www.thekooples.com/fr/fr/">Accueil</a> / Journal</div>
+<h1>Le journal The Kooples : idées look et guide d'entretien</h1>
+<p class="intro">Une tenue pour chaque occasion, des conseils pour faire durer vos pièces en cuir, en laine, en soie ou en lin : tout pour choisir, porter et garder vos pièces.</p>
 <div class="search">Rechercher un look, une matière, une occasion<b></b></div>
-<div class="chips"><span>Idées look</span><span>Guide d'entretien</span><span>Tendances et rock</span><span>Femme</span><span>Homme</span><span class="on">Tous les articles</span></div>
+<div class="chips"><a href="#idees-look">Idées look</a><a href="#entretien">Guide d'entretien</a><span>Femme</span><span>Homme</span><span class="on">Tous les articles</span></div>
+
 <div class="grid">
-<div><div class="k">Tendances</div><h2>Les plus lus</h2>
-<a class="it" href="article.html" style="color:inherit;text-decoration:none"><span class="n">01</span><img src="img/robe-blazer.jpg"><div><h3>Quelle tenue chic pour une femme ? 6 looks à composer</h3><p>Idées look · 6 min de lecture</p></div></a>
-<div class="it"><span class="n">02</span><img src="img/robe-sequins.jpg"><div><h3>Tenue de soirée femme : les robes pour briller cet hiver</h3><p>Idées look · 5 min de lecture</p></div></div>
-<div class="it"><span class="n">03</span><img src="img/maille.jpg"><div><h3>Comment laver un pull en cachemire sans l'abîmer ?</h3><p>Guide d'entretien · 4 min de lecture</p></div></div>
-<div class="it"><span class="n">04</span><img src="img/robe-satin-rouge.jpg"><div><h3>Couleurs tendance 2026 : ce qu'on portera cette saison</h3><p>Tendances et rock · 5 min de lecture</p></div></div>
-<div class="it"><span class="n">05</span><img src="img/vestes.jpg"><div><h3>Nettoyer et entretenir une veste en cuir</h3><p>Guide d'entretien · 4 min de lecture</p></div></div>
+<div><div class="k">Cette semaine</div><h2>Les plus lus</h2>
+<a class="it" href="article.html"><span class="n">01</span><img src="img/robe-blazer.jpg" alt=""><div><h3>Quelle tenue chic pour une femme ? 6 looks à composer</h3><p>Idées look · 6 min de lecture</p></div></a>
+<div class="it"><span class="n">02</span><img src="img/robe-sequins.jpg" alt=""><div><h3>Tenue de soirée femme : les robes pour briller cet hiver</h3><p>Idées look · 5 min de lecture</p></div></div>
+<div class="it"><span class="n">03</span><img src="img/maille.jpg" alt=""><div><h3>Comment laver un pull en cachemire sans l'abîmer ?</h3><p>Guide d'entretien · 4 min de lecture</p></div></div>
+<div class="it"><span class="n">04</span><img src="img/robe-satin-rouge.jpg" alt=""><div><h3>Tenue de mariage femme : 5 looks d'invitée</h3><p>Idées look · 5 min de lecture</p></div></div>
+<div class="it"><span class="n">05</span><img src="img/vestes.jpg" alt=""><div><h3>Nettoyer et entretenir une veste en cuir</h3><p>Guide d'entretien · 4 min de lecture</p></div></div>
 </div>
-<div class="feat"><img src="img/robe-drapee-noire.jpg"><div class="k">Le style rock</div><h3>Adopter le look rock au féminin</h3><p>Cuir, dentelle, noir et bottes : les pièces pour composer une tenue rock, du jour au soir.</p><a class="btn" href="article.html" style="text-decoration:none">Lire l'article</a></div>
-</div></div></body></html>
+<div class="feat"><img src="img/sac.jpg" style="object-position:center;object-fit:contain;background:#f2f2f2" alt=""><div class="k">Guide d'entretien</div><h3>Comment nettoyer un sac en cuir</h3><p>Taches, pluie, frottements : les bons gestes pour garder un sac en cuir comme au premier jour.</p><span class="btn">Lire l'article</span></div>
+</div>
+
+<section class="sec" id="idees-look">
+<div class="top"><div><div class="k">Rubrique</div><h2>Idées look</h2><p>Mariage, soirée, bureau, baptême : une tenue pour chaque occasion, composée avec les pièces de la collection.</p></div><span class="all">Tous les looks</span></div>
+<div class="cards">
+<a class="cd" href="article.html"><div class="im"><img src="img/robe-blazer.jpg" alt=""></div><div class="k">Femme</div><h3>Quelle tenue chic pour une femme ? 6 looks à composer</h3><p>6 min de lecture</p></a>
+<div class="cd"><div class="im"><img src="img/robe-satin-rouge.jpg" alt=""></div><div class="k">Femme</div><h3>Tenue de mariage femme : 5 looks d'invitée</h3><p>5 min de lecture</p></div>
+<div class="cd"><div class="im"><img src="img/homme.jpg" alt=""></div><div class="k">Homme</div><h3>Tenue de mariage homme : le costume et ses alternatives</h3><p>5 min de lecture</p></div>
+<div class="cd"><div class="im"><img src="img/robe-sequins.jpg" alt=""></div><div class="k">Femme</div><h3>Tenue de soirée femme : les robes pour briller cet hiver</h3><p>5 min de lecture</p></div>
+<div class="cd"><div class="im"><img src="https://www.thekooples.com/fr/fr/phototheque/thekooples.com/133250/medium/01W133204A.jpg" alt=""></div><div class="k">Homme</div><h3>Tenue chic homme : les pièces pour composer un look habillé</h3><p>5 min de lecture</p></div>
+<div class="cd"><div class="im"><img src="img/robe-drapee-noire.jpg" alt=""></div><div class="k">Femme</div><h3>Tenue de baptême femme : 4 looks élégants</h3><p>4 min de lecture</p></div>
+</div>
+</section>
+
+<section class="sec" id="entretien">
+<div class="top"><div><div class="k">Rubrique</div><h2>Guide d'entretien</h2><p>Cuir, laine, soie, denim : les bons gestes pour laver, ranger et faire durer vos pièces.</p></div><span class="all">Tous les conseils</span></div>
+<div class="cards">
+<div class="cd"><div class="im"><img src="https://www.thekooples.com/fr/fr/phototheque/thekooples.com/133500/medium/01W133439A.jpg" alt=""></div><div class="k">Chaussures</div><h3>Comment nettoyer des baskets blanches ?</h3><p>4 min de lecture</p></div>
+<div class="cd"><div class="im"><img src="https://www.thekooples.com/fr/fr/phototheque/thekooples.com/132250/medium/01W132058A.jpg" alt=""></div><div class="k">Coton</div><h3>Comment repasser une chemise sans faux plis ?</h3><p>3 min de lecture</p></div>
+<div class="cd"><div class="im"><img src="https://www.thekooples.com/fr/fr/phototheque/thekooples.com/132500/medium/01W132479A.jpg" alt=""></div><div class="k">Laine</div><h3>Comment enlever les bouloches d'un pull ?</h3><p>3 min de lecture</p></div>
+<div class="cd"><div class="im"><img src="https://www.thekooples.com/fr/fr/phototheque/thekooples.com/250/medium/01W000096A.jpg" alt=""></div><div class="k">Cuir</div><h3>Entretenir ses chaussures en cuir : le guide complet</h3><p>4 min de lecture</p></div>
+<div class="cd"><div class="im"><img src="https://www.thekooples.com/fr/fr/phototheque/thekooples.com/135500/medium/01W135323A.jpg" alt=""></div><div class="k">Soie</div><h3>Comment laver de la soie sans l'abîmer ?</h3><p>4 min de lecture</p></div>
+<div class="cd"><div class="im"><img src="https://www.thekooples.com/fr/fr/phototheque/thekooples.com/132250/medium/01W132037A.jpg" alt=""></div><div class="k">Denim</div><h3>Comment laver un jean pour qu'il garde sa couleur ?</h3><p>3 min de lecture</p></div>
+</div>
+</section>
+
+<section class="shop">
+<div class="k">Shopper les looks</div><h2>Les pièces de nos articles</h2><p class="sub">Retrouvez les pièces citées dans le journal dans nos collections.</p>
+<div class="tiles">
+<a class="tile" href="https://www.thekooples.com/fr/fr/femme/pret-a-porter/robes.html"><img src="img/robe-drapee-noire.jpg" alt=""><span>Robes femme</span></a>
+<a class="tile" href="https://www.thekooples.com/fr/fr/femme/pret-a-porter/tailleurs.html"><img src="https://www.thekooples.com/fr/fr/phototheque/thekooples.com/4750/medium/01W004539A.jpg" alt=""><span>Tailleurs femme</span></a>
+<a class="tile" href="https://www.thekooples.com/fr/fr/femme/selections/cuir.html"><img src="img/vestes.jpg" alt=""><span>Cuir femme</span></a>
+</div>
+</section>
+</div>
+<div class="ft"><img src="img/footer-site.png" alt="Pied de page thekooples.com"></div>
+</body></html>
